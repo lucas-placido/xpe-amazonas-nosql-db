@@ -1,0 +1,3154 @@
+{
+  "modelName": "amazonas-db-v2",
+  "collections": [
+    {
+      "collectionName": "carts",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "_id",
+          "isActivated": true,
+          "type": "objectId",
+          "primaryKey": true,
+          "GUID": "3469ee64-b6e3-48b3-aeb4-05090cbfbef6",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "customer_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "8ca68c81-24d2-48e4-9236-b9be3d7007d3",
+          "required": true,
+          "sample": "b0688d9d-3361-4729-a1f9-e9c1cb030ad1",
+          "error": {},
+          "childRelationships": [
+            "1f59b55d-882c-49c1-a11b-b3b58f765c7d"
+          ],
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+          "foreignField": [
+            "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+            "64da9dff-264f-4dca-93c9-6b96f7069280"
+          ],
+          "parentRelationship": "6a882d89-a731-4d99-812d-522511619b11"
+        },
+        {
+          "code": "",
+          "name": "items",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "product_id",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "af1412e9-7420-4379-9b5e-636dbb203bad",
+                  "required": true,
+                  "sample": "SKU-002",
+                  "error": {},
+                  "relationshipType": "Foreign Key",
+                  "foreignCollection": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+                  "foreignField": [
+                    "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+                    "19d4539e-31ca-4663-825e-d9dcef920063"
+                  ],
+                  "parentRelationship": "394161d1-eefd-41e5-9924-735332f3e313"
+                },
+                {
+                  "code": "",
+                  "name": "qty",
+                  "isActivated": true,
+                  "type": "numeric",
+                  "primaryKey": false,
+                  "GUID": "31a6a561-03fe-4da9-9239-e5b031d0b150",
+                  "required": true,
+                  "mode": "integer32",
+                  "sample": 1,
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "variant",
+                  "isActivated": true,
+                  "type": "null",
+                  "primaryKey": false,
+                  "GUID": "fdde5164-fa17-486e-a8b8-f8bc444e8be8",
+                  "sample": null,
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "product_snapshot",
+                  "isActivated": true,
+                  "type": "document",
+                  "properties": [
+                    {
+                      "code": "",
+                      "name": "title",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "408fdd27-54cd-4160-ab1d-9ebc90b69c1b",
+                      "required": true,
+                      "sample": "Tênis Nike Air",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "description",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "0b60b6e4-cf68-490f-962b-be9347bea403",
+                      "required": true,
+                      "sample": "Tênis esportivo confortável e estiloso",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "category",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "f78057f0-0c21-46dd-aaed-55c287f1eb10",
+                      "required": true,
+                      "sample": "Vestuário",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "brand",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "ab48a604-ff2c-4c92-a4b1-951f46d20404",
+                      "required": true,
+                      "sample": "Nike",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "attributes",
+                      "isActivated": true,
+                      "type": "document",
+                      "properties": [
+                        {
+                          "code": "",
+                          "name": "cor",
+                          "isActivated": true,
+                          "type": "string",
+                          "primaryKey": false,
+                          "GUID": "70810987-89c2-4376-8823-e95c0727bd55",
+                          "required": true,
+                          "sample": "Branco",
+                          "error": {}
+                        },
+                        {
+                          "code": "",
+                          "name": "tamanho",
+                          "isActivated": true,
+                          "type": "string",
+                          "primaryKey": false,
+                          "GUID": "9ddf97c6-d738-4959-9988-6451c3b00306",
+                          "required": false,
+                          "sample": "42",
+                          "error": {}
+                        },
+                        {
+                          "code": "",
+                          "name": "memoria",
+                          "isActivated": true,
+                          "type": "string",
+                          "primaryKey": false,
+                          "GUID": "180dc556-6170-4292-b61c-4aa77cbfc132",
+                          "required": false,
+                          "error": {}
+                        }
+                      ],
+                      "additionalProperties": true,
+                      "primaryKey": false,
+                      "GUID": "ae780781-1a5a-4b61-aa46-b5cf3f597e2c",
+                      "required": true,
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "price_at_add",
+                      "isActivated": true,
+                      "type": "numeric",
+                      "primaryKey": false,
+                      "GUID": "6582e0b0-fca6-4d21-96bf-0b24c8ed9c50",
+                      "required": true,
+                      "mode": "double",
+                      "sample": 499.9,
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "currency",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "65adf410-4362-40ed-8348-44998b92f1c9",
+                      "required": true,
+                      "sample": "BRL",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "images",
+                      "isActivated": true,
+                      "type": "array",
+                      "properties": [
+                        {
+                          "hackoladeMeta": {},
+                          "isActivated": true,
+                          "type": "string",
+                          "GUID": "c742eacb-2422-4d70-8722-478588273df1",
+                          "arrayItem": true,
+                          "sample": "https://example.com/img/nikeair.jpg",
+                          "error": {}
+                        }
+                      ],
+                      "additionalItems": true,
+                      "primaryKey": false,
+                      "GUID": "0578ca46-b90b-4714-acb8-110cf5ab2250",
+                      "required": true,
+                      "error": {}
+                    }
+                  ],
+                  "additionalProperties": true,
+                  "primaryKey": false,
+                  "GUID": "a41a3e08-4297-444c-8dc3-a01d9b80fd1f",
+                  "required": true,
+                  "error": {}
+                }
+              ],
+              "additionalProperties": true,
+              "GUID": "7a7e2f8a-b001-4d9d-9af1-7acc9cb27c3d",
+              "arrayItem": true,
+              "error": {}
+            }
+          ],
+          "additionalItems": true,
+          "primaryKey": false,
+          "GUID": "7afc52f0-cd7b-4699-9b72-e690cd09e7a6",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "updated_at",
+          "isActivated": true,
+          "type": "date",
+          "primaryKey": false,
+          "GUID": "95a6a5ad-fd48-4704-8fb1-023399ad0652",
+          "required": true,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "257383e3-248d-4bc9-900d-667bcc4ddc1a",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [
+        {
+          "key": [
+            {
+              "keyId": "3469ee64-b6e3-48b3-aeb4-05090cbfbef6",
+              "type": "ascending"
+            }
+          ],
+          "name": "_id_",
+          "GUID": "cb1e741d-bd6c-491f-b48c-2fbe0563a8ff"
+        },
+        {
+          "key": [
+            {
+              "keyId": "8ca68c81-24d2-48e4-9236-b9be3d7007d3",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_customer_cart",
+          "unique": true,
+          "GUID": "2aba873e-0e2a-4081-b819-82c16c433feb"
+        },
+        {
+          "key": [
+            {
+              "keyId": "95a6a5ad-fd48-4704-8fb1-023399ad0652",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_updated_at",
+          "GUID": "2dbd860b-a975-4ce6-a860-7c69d5bff08b"
+        },
+        {
+          "key": [
+            {
+              "keyId": "af1412e9-7420-4379-9b5e-636dbb203bad",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_items_product",
+          "GUID": "19efba5d-d600-4690-864a-6662347c6cd2"
+        }
+      ],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+      "bucketId": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "code": "",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "customers",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "_id",
+          "isActivated": true,
+          "type": "objectId",
+          "primaryKey": true,
+          "GUID": "9798c25a-49ec-4732-8f4d-e234f73091d4",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "customer_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "64da9dff-264f-4dca-93c9-6b96f7069280",
+          "required": true,
+          "sample": "b0688d9d-3361-4729-a1f9-e9c1cb030ad1",
+          "error": {},
+          "childRelationships": [
+            "6a882d89-a731-4d99-812d-522511619b11",
+            "fa373b2a-dc9f-4900-afe7-0e799abf2afa",
+            "294af675-fa9a-47d4-a308-fc992b5355e3"
+          ]
+        },
+        {
+          "code": "",
+          "name": "name",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "85669501-8846-454f-9412-e20a749609a2",
+          "required": true,
+          "sample": "Maria Souza",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "email",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "c13075fb-18c4-4143-86de-4886a869f884",
+          "required": true,
+          "sample": "maria.souza@example.com",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "phones",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "bd045e20-0083-459f-a75e-c64a2faef292",
+              "arrayItem": true,
+              "sample": "+55 11 91234-5678",
+              "error": {}
+            }
+          ],
+          "additionalItems": true,
+          "primaryKey": false,
+          "GUID": "527b610f-89b7-46eb-bad1-c7e0b65c71e8",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "addresses",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "label",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "325a65eb-c0a1-4417-9f6b-7b46fa9027ea",
+                  "required": true,
+                  "sample": "Casa",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "street",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "fec734a0-c474-4bec-b7f4-27160641f887",
+                  "required": true,
+                  "sample": "Rua das Flores",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "number",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "9944f091-879c-4de2-9e43-894573a2d56e",
+                  "required": true,
+                  "sample": "123",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "district",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "4f2f0690-bc35-492c-8c0a-4183ff18e6c6",
+                  "required": true,
+                  "sample": "Jardim Primavera",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "city",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "2082e33a-494c-4cbf-9e79-102d4c6e120f",
+                  "required": true,
+                  "sample": "São Paulo",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "state",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "105c3150-e9fd-4671-ba63-3ef203132f9d",
+                  "required": true,
+                  "sample": "SP",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "zip",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "9e258d23-7628-46fe-8978-d9b312b7a111",
+                  "required": true,
+                  "sample": "01001-000",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "country",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "cd70ddd8-3520-404a-998c-d440deb1c075",
+                  "required": true,
+                  "sample": "Brasil",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "is_default",
+                  "isActivated": true,
+                  "type": "boolean",
+                  "primaryKey": false,
+                  "GUID": "7c533737-71b0-4b3c-9e5a-7b355c4c6f32",
+                  "required": true,
+                  "sample": true,
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "complement",
+                  "isActivated": true,
+                  "type": "multiple",
+                  "multipleTypes": [
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "string",
+                      "GUID": "d314d60c-bb02-4bc1-b858-bdabf8c662db"
+                    },
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "null",
+                      "GUID": "370837e1-b4d5-415f-9497-fad0f32779d1"
+                    }
+                  ],
+                  "GUID": "b3cccaa3-b7b9-420a-acd5-f2c05d566865",
+                  "required": false,
+                  "error": {}
+                }
+              ],
+              "additionalProperties": true,
+              "GUID": "744595c7-a98f-422b-a7e7-cbeb2466523c",
+              "arrayItem": true,
+              "error": {}
+            }
+          ],
+          "additionalItems": true,
+          "primaryKey": false,
+          "GUID": "1e675ac6-9a23-4b0e-a9af-f9377765bc0b",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "created_at",
+          "isActivated": true,
+          "type": "date",
+          "primaryKey": false,
+          "GUID": "7ed2d25b-e79f-4880-b5d2-6c5435a32609",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "updated_at",
+          "isActivated": true,
+          "type": "null",
+          "primaryKey": false,
+          "GUID": "bb08aab1-0409-493c-bb29-ba3cda9396e8",
+          "sample": null,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "b9babaa3-72ee-400a-9fc3-e5294971b6b3",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [
+        {
+          "key": [
+            {
+              "keyId": "9798c25a-49ec-4732-8f4d-e234f73091d4",
+              "type": "ascending"
+            }
+          ],
+          "name": "_id_",
+          "GUID": "f01ca1ff-938b-486c-b143-6bde9bcb386d"
+        },
+        {
+          "key": [
+            {
+              "keyId": "64da9dff-264f-4dca-93c9-6b96f7069280",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_customer_id",
+          "unique": true,
+          "GUID": "85a27c44-53b9-49a3-8c9b-d4111e4daa77"
+        },
+        {
+          "key": [
+            {
+              "keyId": "c13075fb-18c4-4143-86de-4886a869f884",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_email",
+          "unique": true,
+          "GUID": "eb1f0eed-bc7f-4a4b-bc04-234a278bac55"
+        }
+      ],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+      "bucketId": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "code": "",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "orders",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "_id",
+          "isActivated": true,
+          "type": "objectId",
+          "primaryKey": true,
+          "GUID": "c3dc5b75-9659-48ed-ba65-ac6e00c3d854",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "order_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "c46add97-898b-4c71-8669-bd9335e2c295",
+          "required": true,
+          "sample": "e75cd3b4-91e1-4a82-b467-f09216025fd1",
+          "error": {},
+          "childRelationships": [
+            "9b5771a6-782a-4462-8ead-5d359e86b32b"
+          ]
+        },
+        {
+          "code": "",
+          "name": "customer_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "c5e2b1c7-abb0-4298-9356-16fb3ab8718d",
+          "required": true,
+          "sample": "b0688d9d-3361-4729-a1f9-e9c1cb030ad1",
+          "error": {},
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+          "foreignField": [
+            "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+            "64da9dff-264f-4dca-93c9-6b96f7069280"
+          ],
+          "parentRelationship": "fa373b2a-dc9f-4900-afe7-0e799abf2afa"
+        },
+        {
+          "code": "",
+          "name": "customer_snapshot",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "customer_id",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "26cc59c4-debf-4c62-b57b-e034a6ded382",
+              "required": true,
+              "sample": "b0688d9d-3361-4729-a1f9-e9c1cb030ad1",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "name",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "19acb6d4-386c-4e76-95ec-1fcc8f95c74e",
+              "required": true,
+              "sample": "Maria Souza",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "email",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "5f7bf0cf-1e99-48d4-a3f3-2c6245e52e15",
+              "required": true,
+              "sample": "maria.souza@example.com",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "phones",
+              "isActivated": true,
+              "type": "array",
+              "properties": [
+                {
+                  "hackoladeMeta": {},
+                  "isActivated": true,
+                  "type": "string",
+                  "GUID": "8bc3afd2-3e43-43c8-871a-deed61cc44c5",
+                  "arrayItem": true,
+                  "sample": "+55 11 91234-5678",
+                  "error": {}
+                }
+              ],
+              "additionalItems": true,
+              "primaryKey": false,
+              "GUID": "c50838f0-93de-4b20-abf2-d4aae45f32b1",
+              "required": true,
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "default_address",
+              "isActivated": true,
+              "type": "document",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "label",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "e257be89-053d-4d3a-b2ad-8a34c1bf7bb4",
+                  "required": true,
+                  "sample": "Trabalho",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "street",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "884f6170-ee5d-4b68-8261-f728981e8d47",
+                  "required": true,
+                  "sample": "Av. Atlântica",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "number",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "12373dbb-d78c-4724-89c2-0f79e6095864",
+                  "required": true,
+                  "sample": "500",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "district",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "3cb971e6-f0bf-42ff-b4e2-07677818b3b1",
+                  "required": true,
+                  "sample": "Copacabana",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "city",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "03529d70-c16d-403b-8753-3c3253705126",
+                  "required": true,
+                  "sample": "Rio de Janeiro",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "state",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "a18d1fd2-e3e1-44d0-b302-1b94a52ad633",
+                  "required": true,
+                  "sample": "RJ",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "zip",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "0abf515e-a987-46f5-b3c5-da4015ac2184",
+                  "required": true,
+                  "sample": "22010-000",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "country",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "1f6254a5-c2b1-4ea3-a202-bd3d4a7a58fe",
+                  "required": true,
+                  "sample": "Brasil",
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "is_default",
+                  "isActivated": true,
+                  "type": "boolean",
+                  "primaryKey": false,
+                  "GUID": "f8b67842-131b-4731-856f-1702b5f7ebdf",
+                  "required": true,
+                  "sample": true,
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "complement",
+                  "isActivated": true,
+                  "type": "multiple",
+                  "multipleTypes": [
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "string",
+                      "GUID": "a5410afe-a25b-4f60-9f93-2c1d6c6e18cc"
+                    },
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "null",
+                      "GUID": "578dc9e9-2948-4579-ae7e-4921b0514b48"
+                    }
+                  ],
+                  "GUID": "31469d8a-1890-4120-98c8-c8a73be9711c",
+                  "required": false,
+                  "error": {}
+                }
+              ],
+              "additionalProperties": true,
+              "primaryKey": false,
+              "GUID": "639ff7f3-dd49-4086-abd2-9bf9386f509f",
+              "required": true,
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "a64c6fe1-6932-42e0-807f-ef7a3985d428",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "status",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "PLACED",
+            "PAID",
+            "SHIPPED",
+            "DELIVERED",
+            "CANCELLED",
+            "REFUNDED"
+          ],
+          "primaryKey": false,
+          "GUID": "15786039-5b68-4fc8-9203-626dde0eebf5",
+          "required": true,
+          "sample": "PLACED",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "items",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "product_id",
+                  "isActivated": true,
+                  "type": "string",
+                  "primaryKey": false,
+                  "GUID": "368ea24c-69f8-4c32-8557-06a266988823",
+                  "required": true,
+                  "sample": "SKU-002",
+                  "error": {},
+                  "relationshipType": "Foreign Key",
+                  "foreignCollection": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+                  "foreignField": [
+                    "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+                    "19d4539e-31ca-4663-825e-d9dcef920063"
+                  ],
+                  "parentRelationship": "94edbf80-c6bf-4c00-9f31-86bcf48377ad"
+                },
+                {
+                  "code": "",
+                  "name": "qty",
+                  "isActivated": true,
+                  "type": "numeric",
+                  "primaryKey": false,
+                  "GUID": "11fc28f8-e6cb-415b-be82-56d7a7768958",
+                  "required": true,
+                  "mode": "integer32",
+                  "sample": 1,
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "variant",
+                  "isActivated": true,
+                  "type": "null",
+                  "primaryKey": false,
+                  "GUID": "1c51e04e-845b-441e-92b5-e62602a87edb",
+                  "sample": null,
+                  "error": {}
+                },
+                {
+                  "code": "",
+                  "name": "product_snapshot",
+                  "isActivated": true,
+                  "type": "document",
+                  "properties": [
+                    {
+                      "code": "",
+                      "name": "title",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "33b7a768-8123-4119-b312-e11d3265e28c",
+                      "required": true,
+                      "sample": "Tênis Nike Air",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "description",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "135f2072-74f4-46f1-a509-ac8f1aebe3d0",
+                      "required": true,
+                      "sample": "Tênis esportivo confortável e estiloso",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "category",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "1b11a731-1dca-40cb-8527-a61bceef81e3",
+                      "required": true,
+                      "sample": "Vestuário",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "brand",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "9b5dbce9-0a48-49be-9463-ea8835eacb8a",
+                      "required": true,
+                      "sample": "Nike",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "attributes",
+                      "isActivated": true,
+                      "type": "document",
+                      "properties": [
+                        {
+                          "code": "",
+                          "name": "cor",
+                          "isActivated": true,
+                          "type": "string",
+                          "primaryKey": false,
+                          "GUID": "ee5b8649-0f77-4136-ba1c-ef519efa2e57",
+                          "required": true,
+                          "sample": "Branco",
+                          "error": {}
+                        },
+                        {
+                          "code": "",
+                          "name": "tamanho",
+                          "isActivated": true,
+                          "type": "string",
+                          "primaryKey": false,
+                          "GUID": "dc828de1-9d60-400f-8890-c60520729072",
+                          "required": false,
+                          "sample": "42",
+                          "error": {}
+                        },
+                        {
+                          "code": "",
+                          "name": "memoria",
+                          "isActivated": true,
+                          "type": "string",
+                          "primaryKey": false,
+                          "GUID": "7ff7d3d0-7a58-4cec-a2ee-e1e91337080c",
+                          "required": false,
+                          "error": {}
+                        }
+                      ],
+                      "additionalProperties": true,
+                      "primaryKey": false,
+                      "GUID": "8a903a9f-0fb2-487e-a45f-2c6fe82beb9d",
+                      "required": true,
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "price_at_order",
+                      "isActivated": true,
+                      "type": "numeric",
+                      "primaryKey": false,
+                      "GUID": "e8dcae0d-6779-4dd8-8974-98009384eab6",
+                      "required": true,
+                      "mode": "double",
+                      "sample": 499.9,
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "currency",
+                      "isActivated": true,
+                      "type": "string",
+                      "primaryKey": false,
+                      "GUID": "bccfa22b-c8d8-4a52-9c3d-edb0fbd1e264",
+                      "required": true,
+                      "sample": "BRL",
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "images",
+                      "isActivated": true,
+                      "type": "array",
+                      "properties": [
+                        {
+                          "hackoladeMeta": {},
+                          "isActivated": true,
+                          "type": "string",
+                          "GUID": "5d7c6fd7-9d03-4f7d-9c02-e758d022b89b",
+                          "arrayItem": true,
+                          "sample": "https://example.com/img/nikeair.jpg",
+                          "error": {}
+                        }
+                      ],
+                      "additionalItems": true,
+                      "primaryKey": false,
+                      "GUID": "4178cc15-100d-426b-95c4-ea8808fc3f3a",
+                      "required": true,
+                      "error": {}
+                    },
+                    {
+                      "code": "",
+                      "name": "status",
+                      "isActivated": true,
+                      "type": "string",
+                      "enum": [
+                        "ACTIVE",
+                        "INACTIVE",
+                        "DISCONTINUED",
+                        null
+                      ],
+                      "primaryKey": false,
+                      "GUID": "666bd1d8-5e10-4cdd-9f10-076a33232af2",
+                      "required": true,
+                      "sample": "ACTIVE",
+                      "error": {}
+                    }
+                  ],
+                  "additionalProperties": true,
+                  "primaryKey": false,
+                  "GUID": "25afccc3-e119-4618-a719-54cadb520e4a",
+                  "required": true,
+                  "error": {}
+                }
+              ],
+              "additionalProperties": true,
+              "GUID": "67ae382e-15c6-4336-9ad2-becde728b9e6",
+              "arrayItem": true,
+              "error": {}
+            }
+          ],
+          "additionalItems": true,
+          "primaryKey": false,
+          "GUID": "3eef121f-cd12-41f6-a0c3-8c5498d8c396",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "shipping_address",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "label",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "eec9aee5-93ca-4cc8-97cd-17a818613706",
+              "required": true,
+              "sample": "Trabalho",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "street",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "33a87adc-a986-4621-bbe4-6b82733ed76b",
+              "required": true,
+              "sample": "Av. Atlântica",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "number",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "163a670d-d91e-4ffc-a213-1aedbfdd472a",
+              "required": true,
+              "sample": "500",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "district",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "24cdadcf-193a-43a5-ae6e-3ed637d1b716",
+              "required": true,
+              "sample": "Copacabana",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "city",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "5e824d5b-1a0d-4d73-9c17-6a83a5df3459",
+              "required": true,
+              "sample": "Rio de Janeiro",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "state",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "a0aadcf9-322c-48d5-9e53-b550ec410320",
+              "required": true,
+              "sample": "RJ",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "zip",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "37c0075b-afae-4999-9cf2-9690a569997e",
+              "required": true,
+              "sample": "22010-000",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "country",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "7c338552-dc32-4973-94d7-cc2bd99895c6",
+              "required": true,
+              "sample": "Brasil",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "is_default",
+              "isActivated": true,
+              "type": "boolean",
+              "primaryKey": false,
+              "GUID": "230baa2d-dc67-42a1-90cf-3023668a0018",
+              "required": true,
+              "sample": true,
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "complement",
+              "isActivated": true,
+              "type": "multiple",
+              "multipleTypes": [
+                {
+                  "hackoladeMeta": {},
+                  "isActivated": true,
+                  "type": "string",
+                  "GUID": "b34a6fbb-6ca8-43e2-9e1f-5294e4231e73"
+                },
+                {
+                  "hackoladeMeta": {},
+                  "isActivated": true,
+                  "type": "null",
+                  "GUID": "a94a7c50-26aa-45a2-9960-1eca43c64e5b"
+                }
+              ],
+              "GUID": "c7f300b4-3f6f-48e1-9b5c-25b1784ea084",
+              "required": false,
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "fb79a7b6-1ab1-4294-8a32-f9c908a4a5eb",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "payment_summary",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "name": "payment_id",
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "error": {},
+              "primaryKey": false,
+              "code": "",
+              "GUID": "75f504cb-9cbc-4590-92ab-64f26ece9d91",
+              "relationshipType": "Foreign Key",
+              "foreignCollection": "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+              "foreignField": [
+                "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+                "f04c1255-3043-4910-bf5b-9ee105d8f539"
+              ],
+              "parentRelationship": "47abc7c8-b9bf-4b8a-aebd-c3f3db447914"
+            },
+            {
+              "code": "",
+              "name": "method",
+              "isActivated": true,
+              "type": "string",
+              "enum": [
+                "PIX",
+                "BOLETO",
+                "CREDIT_CARD",
+                "DEBIT_CARD",
+                "WALLET",
+                null
+              ],
+              "primaryKey": false,
+              "GUID": "699ed38d-5ec2-407c-a0a9-572a9a8c6dd8",
+              "required": true,
+              "sample": "CREDIT_CARD",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "status",
+              "isActivated": true,
+              "type": "string",
+              "enum": [
+                "PENDING",
+                "AUTHORIZED",
+                "CAPTURED",
+                "FAILED",
+                "CANCELLED",
+                null
+              ],
+              "primaryKey": false,
+              "GUID": "ed8c2556-75bc-4efe-9a2b-0da8d859563c",
+              "required": true,
+              "sample": "PENDING",
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "57d1fbf9-91d2-40b8-b0b8-0e6aa132b866",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "total_amount",
+          "isActivated": true,
+          "type": "numeric",
+          "primaryKey": false,
+          "GUID": "b56a2333-f000-42db-90af-bf1d2597c3d5",
+          "required": true,
+          "mode": "double",
+          "sample": 499.9,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "currency",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "4c0f7abc-568a-4398-99f8-3f3aa68f9d5f",
+          "required": true,
+          "sample": "BRL",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "created_at",
+          "isActivated": true,
+          "type": "date",
+          "primaryKey": false,
+          "GUID": "e9f8cf05-0dc4-4978-95d6-78ba267793a0",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "updated_at",
+          "isActivated": true,
+          "type": "null",
+          "primaryKey": false,
+          "GUID": "9a0e0132-29fb-4969-a110-88d1e3e8f3aa",
+          "sample": null,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "c0a062bb-a329-4e63-8bdb-7af613c11b8d",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [
+        {
+          "key": [
+            {
+              "keyId": "c3dc5b75-9659-48ed-ba65-ac6e00c3d854",
+              "type": "ascending"
+            }
+          ],
+          "name": "_id_",
+          "GUID": "9648d959-65ad-4ffb-9384-06abe15b83f8"
+        },
+        {
+          "key": [
+            {
+              "keyId": "c46add97-898b-4c71-8669-bd9335e2c295",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_order_id",
+          "unique": true,
+          "GUID": "4bece5c7-be49-48ca-9856-9c404a54b04d"
+        },
+        {
+          "key": [
+            {
+              "keyId": "c5e2b1c7-abb0-4298-9356-16fb3ab8718d",
+              "type": "ascending"
+            },
+            {
+              "keyId": "e9f8cf05-0dc4-4978-95d6-78ba267793a0",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_customer_created",
+          "GUID": "bdca550c-a49e-4628-bf10-1e42f5e294bd"
+        },
+        {
+          "key": [
+            {
+              "keyId": "15786039-5b68-4fc8-9203-626dde0eebf5",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_status",
+          "GUID": "2688ab60-2619-4cdf-9913-e967c6f4623d"
+        },
+        {
+          "key": [
+            {
+              "keyId": "e9f8cf05-0dc4-4978-95d6-78ba267793a0",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_created_at",
+          "GUID": "39f2dc4c-cc0f-42d2-bc05-35251aa94712"
+        },
+        {
+          "key": [
+            {
+              "keyId": "368ea24c-69f8-4c32-8557-06a266988823",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_items_product",
+          "GUID": "830bfe36-2f68-44a2-95f0-c4391545dfa6"
+        }
+      ],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+      "bucketId": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "code": "",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "payments",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "_id",
+          "isActivated": true,
+          "type": "objectId",
+          "primaryKey": true,
+          "GUID": "53f21e51-9e2d-4114-a505-cd44d3f1784b",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "payment_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "f04c1255-3043-4910-bf5b-9ee105d8f539",
+          "required": true,
+          "sample": "79912c9a-cbea-4af5-9ec0-5ab0711ed8ac",
+          "error": {},
+          "childRelationships": [
+            "47abc7c8-b9bf-4b8a-aebd-c3f3db447914"
+          ]
+        },
+        {
+          "code": "",
+          "name": "order_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "7b5fb8e8-4d98-49dd-8a81-41a82a0e9cea",
+          "required": true,
+          "sample": "e75cd3b4-91e1-4a82-b467-f09216025fd1",
+          "error": {},
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+          "foreignField": [
+            "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+            "c46add97-898b-4c71-8669-bd9335e2c295"
+          ],
+          "parentRelationship": "9b5771a6-782a-4462-8ead-5d359e86b32b"
+        },
+        {
+          "code": "",
+          "name": "amount",
+          "isActivated": true,
+          "type": "numeric",
+          "primaryKey": false,
+          "GUID": "bd8a9aba-a838-4f49-819a-4f874985be1b",
+          "required": true,
+          "mode": "double",
+          "sample": 499.9,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "currency",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "99540bb8-babb-4ddb-98a9-0c75d33b94c5",
+          "required": true,
+          "sample": "BRL",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "method",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "PIX",
+            "BOLETO",
+            "CREDIT_CARD",
+            "DEBIT_CARD",
+            "WALLET"
+          ],
+          "primaryKey": false,
+          "GUID": "b82953f3-7298-491f-86f9-f6e5a8aa54eb",
+          "required": true,
+          "sample": "CREDIT_CARD",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "status",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "AUTHORIZED",
+            "CAPTURED",
+            "FAILED",
+            "CANCELLED",
+            "REFUNDED"
+          ],
+          "primaryKey": false,
+          "GUID": "3ceab5e6-8fd3-4bb7-9d00-56662b45fe13",
+          "required": true,
+          "sample": "AUTHORIZED",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "provider_ref",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "98e69668-71d2-4925-b25a-5e68791fc48d",
+          "required": true,
+          "sample": "PAY-79889",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "metadata",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "parcelas",
+              "isActivated": true,
+              "type": "numeric",
+              "primaryKey": false,
+              "GUID": "f19d8b82-1f83-429f-8b33-b2beb00301a4",
+              "required": true,
+              "mode": "integer32",
+              "sample": 3,
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "663f85de-13d6-4a8c-b5e9-e51fff93cb42",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "created_at",
+          "isActivated": true,
+          "type": "date",
+          "primaryKey": false,
+          "GUID": "fad4f793-6dbe-456d-9b79-b37dda1286e9",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "updated_at",
+          "isActivated": true,
+          "type": "null",
+          "primaryKey": false,
+          "GUID": "68006d2b-7687-42a2-a133-23d50b9c2399",
+          "sample": null,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "c6472e06-4554-40af-ae94-8ce8f59c6d12",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [
+        {
+          "key": [
+            {
+              "keyId": "53f21e51-9e2d-4114-a505-cd44d3f1784b",
+              "type": "ascending"
+            }
+          ],
+          "name": "_id_",
+          "GUID": "190e7317-a707-4c02-9c85-73800c13d4c3"
+        },
+        {
+          "key": [
+            {
+              "keyId": "f04c1255-3043-4910-bf5b-9ee105d8f539",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_payment_id",
+          "unique": true,
+          "GUID": "073262b4-8370-4949-a3cb-8471791bd336"
+        },
+        {
+          "key": [
+            {
+              "keyId": "7b5fb8e8-4d98-49dd-8a81-41a82a0e9cea",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_order",
+          "GUID": "6e322600-0126-494d-ae97-e2c86af04db4"
+        },
+        {
+          "key": [
+            {
+              "keyId": "3ceab5e6-8fd3-4bb7-9d00-56662b45fe13",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_status",
+          "GUID": "9590330c-83c6-431d-b5d1-3564012a6427"
+        },
+        {
+          "key": [
+            {
+              "keyId": "fad4f793-6dbe-456d-9b79-b37dda1286e9",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_created_at",
+          "GUID": "92e4d856-7977-46df-9204-da129b4a5b45"
+        }
+      ],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+      "bucketId": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "code": "",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "products",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "_id",
+          "isActivated": true,
+          "type": "objectId",
+          "primaryKey": true,
+          "GUID": "e9c8586e-b0e3-4a6d-9203-90039f8a8da3",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "product_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "19d4539e-31ca-4663-825e-d9dcef920063",
+          "required": true,
+          "sample": "SKU-002",
+          "error": {},
+          "childRelationships": [
+            "394161d1-eefd-41e5-9924-735332f3e313",
+            "94edbf80-c6bf-4c00-9f31-86bcf48377ad",
+            "bb85e718-ca1c-4ac0-850b-413d44dc10d0"
+          ]
+        },
+        {
+          "code": "",
+          "name": "title",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "56d1ad49-c219-4142-b9f0-65b0cc8f74d2",
+          "required": true,
+          "sample": "Tênis Nike Air",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "description",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "ad0c0f02-149e-481b-aad8-3965c3c1fc02",
+          "required": true,
+          "sample": "Tênis esportivo confortável e estiloso",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "category",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "d5c034f0-2089-4003-a7f5-a258e33a2a47",
+          "required": true,
+          "sample": "Vestuário",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "brand",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "79e5b2fc-5257-48cc-ab1b-6ed5ac23e34b",
+          "required": true,
+          "sample": "Nike",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "price",
+          "isActivated": true,
+          "type": "numeric",
+          "primaryKey": false,
+          "GUID": "8221edf2-f0a5-4bc6-8852-e82428b8b576",
+          "required": true,
+          "mode": "double",
+          "sample": 3999.9,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "currency",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "cd3acc38-e179-43c6-83b3-cfd3d2bb2f3a",
+          "required": true,
+          "sample": "BRL",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "images",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "ba5cbbd7-6770-493c-9f78-9f25ac493b0a",
+              "arrayItem": true,
+              "sample": "https://example.com/img/galaxy.jpg",
+              "error": {}
+            }
+          ],
+          "additionalItems": true,
+          "primaryKey": false,
+          "GUID": "630809fc-5ec0-4f02-934e-d02332910d24",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "attributes",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "cor",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "696d9229-439f-4367-970e-afde00949569",
+              "required": true,
+              "sample": "Branco",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "memoria",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "dbad8372-a4ba-425e-ad2d-1bafd355395c",
+              "required": false,
+              "sample": "256GB",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "tamanho",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "12e33ad8-185a-4d57-b0d9-8509575b0f2b",
+              "required": false,
+              "sample": "42",
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "f8282a54-5fb9-43ed-aea7-a128db781e4a",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "stock",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "available",
+              "isActivated": true,
+              "type": "numeric",
+              "primaryKey": false,
+              "GUID": "c19f13b8-6f2d-46c3-a3b5-aa0ac78e30f3",
+              "required": true,
+              "mode": "integer32",
+              "sample": 120,
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "reserved",
+              "isActivated": true,
+              "type": "numeric",
+              "primaryKey": false,
+              "GUID": "e3917153-35af-4ab9-908b-7bee62196e5c",
+              "required": true,
+              "mode": "integer32",
+              "sample": 5,
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "12fb024d-eb96-4174-9640-1b20a59f87b0",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "status",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "INACTIVE",
+            "DISCONTINUED"
+          ],
+          "primaryKey": false,
+          "GUID": "d0aad18f-741c-47f3-8b27-fed6a3be1599",
+          "required": true,
+          "sample": "ACTIVE",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "created_at",
+          "isActivated": true,
+          "type": "date",
+          "primaryKey": false,
+          "GUID": "8f726c6f-f923-46a1-9cf4-ecd75e8c69cb",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "updated_at",
+          "isActivated": true,
+          "type": "null",
+          "primaryKey": false,
+          "GUID": "c1fb6f0b-5486-416a-847f-565b472823e0",
+          "sample": null,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "dimensions",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "weight_kg",
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "459fcac2-df30-4e01-9e5d-cfda683b90fe",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "width_cm",
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "c1ad9f04-7a9d-4e16-8197-72521725eda8",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "height_cm",
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "44bc59c6-8cb6-4ea1-95d1-d39b6c5cef80",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "depth_cm",
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "79b50697-60e8-42d6-be20-717bde3bb506",
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "GUID": "5a913764-15f3-4460-b3e3-e99dbce6d71f",
+          "required": false,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "54caaa0a-c827-47f9-9db7-6fb9cef24c70",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [
+        {
+          "key": [
+            {
+              "keyId": "e9c8586e-b0e3-4a6d-9203-90039f8a8da3",
+              "type": "ascending"
+            }
+          ],
+          "name": "_id_",
+          "GUID": "5ee67e96-5596-4e97-8bf9-84b22e5e94e5"
+        },
+        {
+          "key": [
+            {
+              "keyId": "19d4539e-31ca-4663-825e-d9dcef920063",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_product_id",
+          "unique": true,
+          "GUID": "62c344fa-7df6-44a7-8cb5-9a4d4fedee5e"
+        },
+        {
+          "key": [
+            {
+              "keyId": "d5c034f0-2089-4003-a7f5-a258e33a2a47",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_category",
+          "GUID": "2a270584-5801-407e-b02b-38018d359e47"
+        },
+        {
+          "key": [
+            {
+              "keyId": "ad0c0f02-149e-481b-aad8-3965c3c1fc02",
+              "type": "text"
+            },
+            {
+              "keyId": "56d1ad49-c219-4142-b9f0-65b0cc8f74d2",
+              "type": "text"
+            }
+          ],
+          "name": "txt_title_description",
+          "weights": "{\n    \"description\": 1,\n    \"title\": 1\n}",
+          "default_language": "english",
+          "language_override": "language",
+          "textIndexVersion": 3,
+          "GUID": "339fbef3-2a05-4138-bbfb-e617905e5c81"
+        },
+        {
+          "key": [
+            {
+              "keyId": "d0aad18f-741c-47f3-8b27-fed6a3be1599",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_status",
+          "GUID": "5fc812d3-20c7-42a5-ab7c-318e0b845975"
+        }
+      ],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+      "bucketId": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "code": "",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "reviews",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "_id",
+          "isActivated": true,
+          "type": "objectId",
+          "primaryKey": true,
+          "GUID": "2766ef02-3c99-4136-8059-faab8690e043",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "review_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "450dcd18-7f90-4ee2-8937-cc4d043c86ca",
+          "required": true,
+          "sample": "0baaf633-5dda-4d24-adc0-56ddcd469ad4",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "product_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "2a5746f7-a224-4e95-94d6-68f5840c904e",
+          "required": true,
+          "sample": "SKU-001",
+          "error": {},
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+          "foreignField": [
+            "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+            "19d4539e-31ca-4663-825e-d9dcef920063"
+          ],
+          "parentRelationship": "bb85e718-ca1c-4ac0-850b-413d44dc10d0"
+        },
+        {
+          "code": "",
+          "name": "customer_id",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "b9bbb6e7-afcc-4ce2-b93d-ab2d54d6b5d9",
+          "required": true,
+          "sample": "b0688d9d-3361-4729-a1f9-e9c1cb030ad1",
+          "error": {},
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+          "foreignField": [
+            "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+            "64da9dff-264f-4dca-93c9-6b96f7069280"
+          ],
+          "parentRelationship": "294af675-fa9a-47d4-a308-fc992b5355e3"
+        },
+        {
+          "code": "",
+          "name": "rating",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "maximum": 5,
+          "primaryKey": false,
+          "GUID": "4d651ff1-e2c3-42e9-b760-74620a050269",
+          "required": true,
+          "mode": "integer32",
+          "sample": 5,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "comment",
+          "isActivated": true,
+          "type": "string",
+          "primaryKey": false,
+          "GUID": "19d84c74-c0bd-4359-838c-19a93ff85246",
+          "required": true,
+          "sample": "Entrega rápida e produto conforme descrição.",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "product_snapshot",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "title",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "77379808-ad7a-46b8-8479-7ec4a558000f",
+              "required": true,
+              "sample": "Smartphone Galaxy S25",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "category",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "346a31dc-c70c-45be-82df-c24d0dabf3a1",
+              "required": true,
+              "sample": "Eletrônicos",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "brand",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "56b4eb9e-def1-42b5-af03-13d5220d5570",
+              "required": true,
+              "sample": "Samsung",
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "d58eb6c6-5fdd-4ab9-b259-0a7387980ac4",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "customer_snapshot",
+          "isActivated": true,
+          "type": "document",
+          "properties": [
+            {
+              "code": "",
+              "name": "name",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "7e2e47f2-7382-42e3-9329-9207a68493ac",
+              "required": true,
+              "sample": "Maria Souza",
+              "error": {}
+            },
+            {
+              "code": "",
+              "name": "email",
+              "isActivated": true,
+              "type": "string",
+              "primaryKey": false,
+              "GUID": "d5bba286-482b-498e-8f50-6966e2c011aa",
+              "required": true,
+              "sample": "maria.souza@example.com",
+              "error": {}
+            }
+          ],
+          "additionalProperties": true,
+          "primaryKey": false,
+          "GUID": "9ad0dd70-375f-4ed9-8b8b-1eeef9077033",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "created_at",
+          "isActivated": true,
+          "type": "date",
+          "primaryKey": false,
+          "GUID": "100a9536-6373-4e2c-967c-efc2c1cf9f39",
+          "required": true,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "9a4c7230-64b2-491a-a366-c42db1d2ebbb",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [
+        {
+          "key": [
+            {
+              "keyId": "2766ef02-3c99-4136-8059-faab8690e043",
+              "type": "ascending"
+            }
+          ],
+          "name": "_id_",
+          "GUID": "1444ea04-a7d5-4e3a-8c3d-94077ddf5a3c"
+        },
+        {
+          "key": [
+            {
+              "keyId": "450dcd18-7f90-4ee2-8937-cc4d043c86ca",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_review_id",
+          "unique": true,
+          "GUID": "d0c375a2-9ea5-4c2b-9894-65dd6c234e4d"
+        },
+        {
+          "key": [
+            {
+              "keyId": "2a5746f7-a224-4e95-94d6-68f5840c904e",
+              "type": "ascending"
+            },
+            {
+              "keyId": "100a9536-6373-4e2c-967c-efc2c1cf9f39",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_product_created",
+          "GUID": "7cd099d6-bb1c-4a47-bbb3-aebb78707be0"
+        },
+        {
+          "key": [
+            {
+              "keyId": "b9bbb6e7-afcc-4ce2-b93d-ab2d54d6b5d9",
+              "type": "ascending"
+            }
+          ],
+          "name": "ix_customer",
+          "GUID": "be63cbaa-bba9-4b01-82e5-44a8100150bb"
+        },
+        {
+          "key": [
+            {
+              "keyId": "2a5746f7-a224-4e95-94d6-68f5840c904e",
+              "type": "ascending"
+            },
+            {
+              "keyId": "b9bbb6e7-afcc-4ce2-b93d-ab2d54d6b5d9",
+              "type": "ascending"
+            }
+          ],
+          "name": "ux_product_customer_review",
+          "unique": true,
+          "GUID": "ebd9fa73-757c-4321-a6c7-b9ee34510d06"
+        }
+      ],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+      "bucketId": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "code": "",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    }
+  ],
+  "buckets": [
+    {
+      "name": "amazonas-db-v2",
+      "type": "bucket",
+      "collectionIds": [
+        "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+        "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+        "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+        "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+        "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+        "5fd199aa-431f-4d2e-85a7-f0041e02c69a"
+      ],
+      "backgroundColor": {
+        "r": 0,
+        "g": 138,
+        "b": 0,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "code": ""
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_carts.customer_id_to_reviews.customer_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+          "8ca68c81-24d2-48e4-9236-b9be3d7007d3"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+          "b9bbb6e7-afcc-4ce2-b93d-ab2d54d6b5d9"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+      "childCollection": "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+      "GUID": "1f59b55d-882c-49c1-a11b-b3b58f765c7d",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "988fa954-f4fb-4827-9e91-d647967c15ee",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1880,
+            "y": 1360
+          },
+          {
+            "x": 1704.9253731343283,
+            "y": 1360
+          },
+          {
+            "x": 1704.9253731343283,
+            "y": 1406.9253731343283
+          },
+          {
+            "x": 1529.8507462686568,
+            "y": 1406.9253731343283
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_products.product_id_to_carts.items.[0].product_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+          "19d4539e-31ca-4663-825e-d9dcef920063"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+          "7afc52f0-cd7b-4699-9b72-e690cd09e7a6",
+          "7a7e2f8a-b001-4d9d-9af1-7acc9cb27c3d",
+          "af1412e9-7420-4379-9b5e-636dbb203bad"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+      "childCollection": "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+      "GUID": "394161d1-eefd-41e5-9924-735332f3e313",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "0ad3ffda-175f-43ea-9932-b4f440a2db4b",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1529.8507462686568,
+            "y": 1542.9253731343283
+          },
+          {
+            "x": 1779.9253731343283,
+            "y": 1542.9253731343283
+          },
+          {
+            "x": 1779.9253731343283,
+            "y": 2226
+          },
+          {
+            "x": 2030,
+            "y": 2226
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_customers.customer_id_to_carts.customer_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+          "64da9dff-264f-4dca-93c9-6b96f7069280"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+          "8ca68c81-24d2-48e4-9236-b9be3d7007d3"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+      "childCollection": "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+      "GUID": "6a882d89-a731-4d99-812d-522511619b11",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "ec367cc2-353b-483c-ad13-d78bd6225956",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1359.8507462686568,
+            "y": 1678.9253731343283
+          },
+          {
+            "x": 1359.8507462686568,
+            "y": 1734.4626865671642
+          },
+          {
+            "x": 1353.6666666666667,
+            "y": 1734.4626865671642
+          },
+          {
+            "x": 1353.6666666666667,
+            "y": 1790
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_customers.customer_id_to_orders.customer_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+          "64da9dff-264f-4dca-93c9-6b96f7069280"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+          "c5e2b1c7-abb0-4298-9356-16fb3ab8718d"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+      "childCollection": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+      "GUID": "fa373b2a-dc9f-4900-afe7-0e799abf2afa",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "2290d844-ed3c-4c99-921b-ec1b729fce60",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1580,
+            "y": 2163.5
+          },
+          {
+            "x": 1541.3333333333335,
+            "y": 2163.5
+          },
+          {
+            "x": 1541.3333333333335,
+            "y": 2050
+          },
+          {
+            "x": 1502.6666666666667,
+            "y": 2050
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_products.product_id_to_orders.items.[0].product_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+          "19d4539e-31ca-4663-825e-d9dcef920063"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+          "3eef121f-cd12-41f6-a0c3-8c5498d8c396",
+          "67ae382e-15c6-4336-9ad2-becde728b9e6",
+          "368ea24c-69f8-4c32-8557-06a266988823"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+      "childCollection": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+      "GUID": "94edbf80-c6bf-4c00-9f31-86bcf48377ad",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "f24bf264-0394-4c61-a715-595eddf0baf6",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1935,
+            "y": 2163.5
+          },
+          {
+            "x": 1982.5,
+            "y": 2163.5
+          },
+          {
+            "x": 1982.5,
+            "y": 2386
+          },
+          {
+            "x": 2030,
+            "y": 2386
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_payments.payment_id_to_orders.payment_summary.payment_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+          "f04c1255-3043-4910-bf5b-9ee105d8f539"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+          "57d1fbf9-91d2-40b8-b0b8-0e6aa132b866",
+          "75f504cb-9cbc-4590-92ab-64f26ece9d91"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+      "childCollection": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+      "GUID": "47abc7c8-b9bf-4b8a-aebd-c3f3db447914",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "963cbb3f-b130-427c-b409-2681b79aea21",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1935,
+            "y": 1889.75
+          },
+          {
+            "x": 1981.1666666666665,
+            "y": 1889.75
+          },
+          {
+            "x": 1981.1666666666665,
+            "y": 1808
+          },
+          {
+            "x": 2027.3333333333333,
+            "y": 1808
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_products.product_id_to_reviews.product_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+          "19d4539e-31ca-4663-825e-d9dcef920063"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+          "2a5746f7-a224-4e95-94d6-68f5840c904e"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+      "childCollection": "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+      "GUID": "bb85e718-ca1c-4ac0-850b-413d44dc10d0",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "f140ef6b-6d50-45d4-ac7b-25d16b062767",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 2042,
+            "y": 1548
+          },
+          {
+            "x": 2042,
+            "y": 1807
+          },
+          {
+            "x": 2168,
+            "y": 1807
+          },
+          {
+            "x": 2168,
+            "y": 2066
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_customers.customer_id_to_reviews.customer_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+          "64da9dff-264f-4dca-93c9-6b96f7069280"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+          "b9bbb6e7-afcc-4ce2-b93d-ab2d54d6b5d9"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+      "childCollection": "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+      "GUID": "294af675-fa9a-47d4-a308-fc992b5355e3",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "8b4fcbec-fe4a-403b-a6b5-4d4a012f7448",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1880,
+            "y": 1454
+          },
+          {
+            "x": 1691.3333333333335,
+            "y": 1454
+          },
+          {
+            "x": 1691.3333333333335,
+            "y": 1920
+          },
+          {
+            "x": 1502.6666666666667,
+            "y": 1920
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_orders.order_id_to_payments.order_id",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+          "c46add97-898b-4c71-8669-bd9335e2c295"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+          "7b5fb8e8-4d98-49dd-8a81-41a82a0e9cea"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+      "childCollection": "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+      "GUID": "9b5771a6-782a-4462-8ead-5d359e86b32b",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "hackoladeStyles": {
+        "GUID": "1d1bbdb0-44a4-4e77-a446-86eef17c7619",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 2027.3333333333333,
+            "y": 1890
+          },
+          {
+            "x": 1981.1666666666665,
+            "y": 1890
+          },
+          {
+            "x": 1981.1666666666665,
+            "y": 2163.5
+          },
+          {
+            "x": 1935,
+            "y": 2163.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a": "amazonas-db-v2",
+    "3469ee64-b6e3-48b3-aeb4-05090cbfbef6": "_id",
+    "8ca68c81-24d2-48e4-9236-b9be3d7007d3": "customer_id",
+    "7afc52f0-cd7b-4699-9b72-e690cd09e7a6": "items",
+    "af1412e9-7420-4379-9b5e-636dbb203bad": "product_id",
+    "31a6a561-03fe-4da9-9239-e5b031d0b150": "qty",
+    "fdde5164-fa17-486e-a8b8-f8bc444e8be8": "variant",
+    "a41a3e08-4297-444c-8dc3-a01d9b80fd1f": "product_snapshot",
+    "408fdd27-54cd-4160-ab1d-9ebc90b69c1b": "title",
+    "0b60b6e4-cf68-490f-962b-be9347bea403": "description",
+    "f78057f0-0c21-46dd-aaed-55c287f1eb10": "category",
+    "ab48a604-ff2c-4c92-a4b1-951f46d20404": "brand",
+    "ae780781-1a5a-4b61-aa46-b5cf3f597e2c": "attributes",
+    "70810987-89c2-4376-8823-e95c0727bd55": "cor",
+    "9ddf97c6-d738-4959-9988-6451c3b00306": "tamanho",
+    "180dc556-6170-4292-b61c-4aa77cbfc132": "memoria",
+    "6582e0b0-fca6-4d21-96bf-0b24c8ed9c50": "price_at_add",
+    "65adf410-4362-40ed-8348-44998b92f1c9": "currency",
+    "0578ca46-b90b-4714-acb8-110cf5ab2250": "images",
+    "95a6a5ad-fd48-4704-8fb1-023399ad0652": "updated_at",
+    "0279add5-820c-4f7f-b37c-42b9fbaf3a46": "carts",
+    "9798c25a-49ec-4732-8f4d-e234f73091d4": "_id",
+    "64da9dff-264f-4dca-93c9-6b96f7069280": "customer_id",
+    "85669501-8846-454f-9412-e20a749609a2": "name",
+    "c13075fb-18c4-4143-86de-4886a869f884": "email",
+    "527b610f-89b7-46eb-bad1-c7e0b65c71e8": "phones",
+    "1e675ac6-9a23-4b0e-a9af-f9377765bc0b": "addresses",
+    "325a65eb-c0a1-4417-9f6b-7b46fa9027ea": "label",
+    "fec734a0-c474-4bec-b7f4-27160641f887": "street",
+    "9944f091-879c-4de2-9e43-894573a2d56e": "number",
+    "4f2f0690-bc35-492c-8c0a-4183ff18e6c6": "district",
+    "2082e33a-494c-4cbf-9e79-102d4c6e120f": "city",
+    "105c3150-e9fd-4671-ba63-3ef203132f9d": "state",
+    "9e258d23-7628-46fe-8978-d9b312b7a111": "zip",
+    "cd70ddd8-3520-404a-998c-d440deb1c075": "country",
+    "7c533737-71b0-4b3c-9e5a-7b355c4c6f32": "is_default",
+    "b3cccaa3-b7b9-420a-acd5-f2c05d566865": "complement",
+    "7ed2d25b-e79f-4880-b5d2-6c5435a32609": "created_at",
+    "bb08aab1-0409-493c-bb29-ba3cda9396e8": "updated_at",
+    "fa78c7f5-79f0-4fb5-990c-ad269ecf293d": "customers",
+    "c3dc5b75-9659-48ed-ba65-ac6e00c3d854": "_id",
+    "c46add97-898b-4c71-8669-bd9335e2c295": "order_id",
+    "c5e2b1c7-abb0-4298-9356-16fb3ab8718d": "customer_id",
+    "a64c6fe1-6932-42e0-807f-ef7a3985d428": "customer_snapshot",
+    "26cc59c4-debf-4c62-b57b-e034a6ded382": "customer_id",
+    "19acb6d4-386c-4e76-95ec-1fcc8f95c74e": "name",
+    "5f7bf0cf-1e99-48d4-a3f3-2c6245e52e15": "email",
+    "c50838f0-93de-4b20-abf2-d4aae45f32b1": "phones",
+    "639ff7f3-dd49-4086-abd2-9bf9386f509f": "default_address",
+    "e257be89-053d-4d3a-b2ad-8a34c1bf7bb4": "label",
+    "884f6170-ee5d-4b68-8261-f728981e8d47": "street",
+    "12373dbb-d78c-4724-89c2-0f79e6095864": "number",
+    "3cb971e6-f0bf-42ff-b4e2-07677818b3b1": "district",
+    "03529d70-c16d-403b-8753-3c3253705126": "city",
+    "a18d1fd2-e3e1-44d0-b302-1b94a52ad633": "state",
+    "0abf515e-a987-46f5-b3c5-da4015ac2184": "zip",
+    "1f6254a5-c2b1-4ea3-a202-bd3d4a7a58fe": "country",
+    "f8b67842-131b-4731-856f-1702b5f7ebdf": "is_default",
+    "31469d8a-1890-4120-98c8-c8a73be9711c": "complement",
+    "15786039-5b68-4fc8-9203-626dde0eebf5": "status",
+    "3eef121f-cd12-41f6-a0c3-8c5498d8c396": "items",
+    "368ea24c-69f8-4c32-8557-06a266988823": "product_id",
+    "11fc28f8-e6cb-415b-be82-56d7a7768958": "qty",
+    "1c51e04e-845b-441e-92b5-e62602a87edb": "variant",
+    "25afccc3-e119-4618-a719-54cadb520e4a": "product_snapshot",
+    "33b7a768-8123-4119-b312-e11d3265e28c": "title",
+    "135f2072-74f4-46f1-a509-ac8f1aebe3d0": "description",
+    "1b11a731-1dca-40cb-8527-a61bceef81e3": "category",
+    "9b5dbce9-0a48-49be-9463-ea8835eacb8a": "brand",
+    "8a903a9f-0fb2-487e-a45f-2c6fe82beb9d": "attributes",
+    "ee5b8649-0f77-4136-ba1c-ef519efa2e57": "cor",
+    "dc828de1-9d60-400f-8890-c60520729072": "tamanho",
+    "7ff7d3d0-7a58-4cec-a2ee-e1e91337080c": "memoria",
+    "e8dcae0d-6779-4dd8-8974-98009384eab6": "price_at_order",
+    "bccfa22b-c8d8-4a52-9c3d-edb0fbd1e264": "currency",
+    "4178cc15-100d-426b-95c4-ea8808fc3f3a": "images",
+    "666bd1d8-5e10-4cdd-9f10-076a33232af2": "status",
+    "fb79a7b6-1ab1-4294-8a32-f9c908a4a5eb": "shipping_address",
+    "eec9aee5-93ca-4cc8-97cd-17a818613706": "label",
+    "33a87adc-a986-4621-bbe4-6b82733ed76b": "street",
+    "163a670d-d91e-4ffc-a213-1aedbfdd472a": "number",
+    "24cdadcf-193a-43a5-ae6e-3ed637d1b716": "district",
+    "5e824d5b-1a0d-4d73-9c17-6a83a5df3459": "city",
+    "a0aadcf9-322c-48d5-9e53-b550ec410320": "state",
+    "37c0075b-afae-4999-9cf2-9690a569997e": "zip",
+    "7c338552-dc32-4973-94d7-cc2bd99895c6": "country",
+    "230baa2d-dc67-42a1-90cf-3023668a0018": "is_default",
+    "c7f300b4-3f6f-48e1-9b5c-25b1784ea084": "complement",
+    "57d1fbf9-91d2-40b8-b0b8-0e6aa132b866": "payment_summary",
+    "75f504cb-9cbc-4590-92ab-64f26ece9d91": "payment_id",
+    "699ed38d-5ec2-407c-a0a9-572a9a8c6dd8": "method",
+    "ed8c2556-75bc-4efe-9a2b-0da8d859563c": "status",
+    "b56a2333-f000-42db-90af-bf1d2597c3d5": "total_amount",
+    "4c0f7abc-568a-4398-99f8-3f3aa68f9d5f": "currency",
+    "e9f8cf05-0dc4-4978-95d6-78ba267793a0": "created_at",
+    "9a0e0132-29fb-4969-a110-88d1e3e8f3aa": "updated_at",
+    "ee8f16c3-a79b-4145-84fe-91ff2e5c8885": "orders",
+    "53f21e51-9e2d-4114-a505-cd44d3f1784b": "_id",
+    "f04c1255-3043-4910-bf5b-9ee105d8f539": "payment_id",
+    "7b5fb8e8-4d98-49dd-8a81-41a82a0e9cea": "order_id",
+    "bd8a9aba-a838-4f49-819a-4f874985be1b": "amount",
+    "99540bb8-babb-4ddb-98a9-0c75d33b94c5": "currency",
+    "b82953f3-7298-491f-86f9-f6e5a8aa54eb": "method",
+    "3ceab5e6-8fd3-4bb7-9d00-56662b45fe13": "status",
+    "98e69668-71d2-4925-b25a-5e68791fc48d": "provider_ref",
+    "663f85de-13d6-4a8c-b5e9-e51fff93cb42": "metadata",
+    "f19d8b82-1f83-429f-8b33-b2beb00301a4": "parcelas",
+    "fad4f793-6dbe-456d-9b79-b37dda1286e9": "created_at",
+    "68006d2b-7687-42a2-a133-23d50b9c2399": "updated_at",
+    "2bf49492-5227-4ea7-bed2-878fbbc351fe": "payments",
+    "e9c8586e-b0e3-4a6d-9203-90039f8a8da3": "_id",
+    "19d4539e-31ca-4663-825e-d9dcef920063": "product_id",
+    "56d1ad49-c219-4142-b9f0-65b0cc8f74d2": "title",
+    "ad0c0f02-149e-481b-aad8-3965c3c1fc02": "description",
+    "d5c034f0-2089-4003-a7f5-a258e33a2a47": "category",
+    "79e5b2fc-5257-48cc-ab1b-6ed5ac23e34b": "brand",
+    "8221edf2-f0a5-4bc6-8852-e82428b8b576": "price",
+    "cd3acc38-e179-43c6-83b3-cfd3d2bb2f3a": "currency",
+    "630809fc-5ec0-4f02-934e-d02332910d24": "images",
+    "f8282a54-5fb9-43ed-aea7-a128db781e4a": "attributes",
+    "696d9229-439f-4367-970e-afde00949569": "cor",
+    "dbad8372-a4ba-425e-ad2d-1bafd355395c": "memoria",
+    "12e33ad8-185a-4d57-b0d9-8509575b0f2b": "tamanho",
+    "12fb024d-eb96-4174-9640-1b20a59f87b0": "stock",
+    "c19f13b8-6f2d-46c3-a3b5-aa0ac78e30f3": "available",
+    "e3917153-35af-4ab9-908b-7bee62196e5c": "reserved",
+    "d0aad18f-741c-47f3-8b27-fed6a3be1599": "status",
+    "8f726c6f-f923-46a1-9cf4-ecd75e8c69cb": "created_at",
+    "c1fb6f0b-5486-416a-847f-565b472823e0": "updated_at",
+    "5a913764-15f3-4460-b3e3-e99dbce6d71f": "dimensions",
+    "459fcac2-df30-4e01-9e5d-cfda683b90fe": "weight_kg",
+    "c1ad9f04-7a9d-4e16-8197-72521725eda8": "width_cm",
+    "44bc59c6-8cb6-4ea1-95d1-d39b6c5cef80": "height_cm",
+    "79b50697-60e8-42d6-be20-717bde3bb506": "depth_cm",
+    "d0cfee96-9af0-466a-94a5-7702a514bfbe": "products",
+    "2766ef02-3c99-4136-8059-faab8690e043": "_id",
+    "450dcd18-7f90-4ee2-8937-cc4d043c86ca": "review_id",
+    "2a5746f7-a224-4e95-94d6-68f5840c904e": "product_id",
+    "b9bbb6e7-afcc-4ce2-b93d-ab2d54d6b5d9": "customer_id",
+    "4d651ff1-e2c3-42e9-b760-74620a050269": "rating",
+    "19d84c74-c0bd-4359-838c-19a93ff85246": "comment",
+    "d58eb6c6-5fdd-4ab9-b259-0a7387980ac4": "product_snapshot",
+    "77379808-ad7a-46b8-8479-7ec4a558000f": "title",
+    "346a31dc-c70c-45be-82df-c24d0dabf3a1": "category",
+    "56b4eb9e-def1-42b5-af03-13d5220d5570": "brand",
+    "9ad0dd70-375f-4ed9-8b8b-1eeef9077033": "customer_snapshot",
+    "7e2e47f2-7382-42e3-9329-9207a68493ac": "name",
+    "d5bba286-482b-498e-8f50-6966e2c011aa": "email",
+    "100a9536-6373-4e2c-967c-efc2c1cf9f39": "created_at",
+    "5fd199aa-431f-4d2e-85a7-f0041e02c69a": "reviews",
+    "1f59b55d-882c-49c1-a11b-b3b58f765c7d": "fk_carts.customer_id_to_reviews.customer_id",
+    "394161d1-eefd-41e5-9924-735332f3e313": "fk_products.product_id_to_carts.items.[0].product_id",
+    "6a882d89-a731-4d99-812d-522511619b11": "fk_customers.customer_id_to_carts.customer_id",
+    "fa373b2a-dc9f-4900-afe7-0e799abf2afa": "fk_customers.customer_id_to_orders.customer_id",
+    "94edbf80-c6bf-4c00-9f31-86bcf48377ad": "fk_products.product_id_to_orders.items.[0].product_id",
+    "47abc7c8-b9bf-4b8a-aebd-c3f3db447914": "fk_payments.payment_id_to_orders.payment_summary.payment_id",
+    "bb85e718-ca1c-4ac0-850b-413d44dc10d0": "fk_products.product_id_to_reviews.product_id",
+    "294af675-fa9a-47d4-a308-fc992b5355e3": "fk_customers.customer_id_to_reviews.customer_id",
+    "9b5771a6-782a-4462-8ead-5d359e86b32b": "fk_orders.order_id_to_payments.order_id"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "2e4c8804-34e9-4714-8410-599f346e66a9"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "306bf402-e9f3-4395-bdaa-92be689dadfb"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "95d3b50f-f216-4748-9a9e-f368dbe36c4a"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVersion": "v7.0",
+  "dbVendor": "MongoDB",
+  "appTarget": "MONGODB",
+  "creationTS": "2025-08-20T14:24:41.340Z",
+  "GUID": "6a58c3fb-4baf-4f88-be2a-ddef42fd8dcb",
+  "isLineageEnabled": false,
+  "hackoladeMeta": {
+    "validationErrors": {
+      "modelName": false
+    }
+  },
+  "lastModifTS": "2025-08-20T14:35:29.526Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.3.8"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "0279add5-820c-4f7f-b37c-42b9fbaf3a46",
+            "x": 1189.8507462686568,
+            "y": 1270.9253731343283,
+            "width": 340,
+            "height": 408,
+            "color": {}
+          },
+          {
+            "GUID": "fa78c7f5-79f0-4fb5-990c-ad269ecf293d",
+            "x": 1204.6666666666667,
+            "y": 1790,
+            "width": 298,
+            "height": 390,
+            "color": {}
+          },
+          {
+            "GUID": "ee8f16c3-a79b-4145-84fe-91ff2e5c8885",
+            "x": 1580,
+            "y": 1616,
+            "width": 355,
+            "height": 1095,
+            "color": {}
+          },
+          {
+            "GUID": "2bf49492-5227-4ea7-bed2-878fbbc351fe",
+            "x": 2027.3333333333333,
+            "y": 1726,
+            "width": 267,
+            "height": 246,
+            "color": {}
+          },
+          {
+            "GUID": "d0cfee96-9af0-466a-94a5-7702a514bfbe",
+            "x": 2030,
+            "y": 2066,
+            "width": 276,
+            "height": 480,
+            "color": {}
+          },
+          {
+            "GUID": "5fd199aa-431f-4d2e-85a7-f0041e02c69a",
+            "x": 1880,
+            "y": 1266,
+            "width": 324,
+            "height": 282,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 1149.8507462686568,
+            "y": 1226,
+            "GUID": "d21bb0a7-c8fb-4ca0-abf9-bb4156ae714a"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {}
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
