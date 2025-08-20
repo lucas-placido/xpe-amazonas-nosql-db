@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "amazonas-nosql"
+version = "0.1.0"
+description = "Projeto final do módulo Bootcamp Arquiteto(a) de dados XPE"
+authors = ["lucas-placido <lucas.cplacido@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+pymongo = "^4.14.1"
+dotenv = "^0.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

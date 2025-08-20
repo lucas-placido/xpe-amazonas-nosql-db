@@ -1,0 +1,2 @@
+{"_id":{"$oid":"68a5c80e163844c82a110694"},"review_id":"35e523dd-72c4-4ccf-a579-6106e2232f24","product_id":"SKU-002","customer_id":"c973a284-2356-46b0-9fed-964d8178a116","rating":3,"comment":"Produto excelente, recomendo!","created_at":{"$date":"2025-08-20T13:05:18.191Z"}}
+{"_id":{"$oid":"68a5c80e163844c82a110695"},"review_id":"96f35988-8c8e-4861-b9dc-802a2ad25e06","product_id":"SKU-001","customer_id":"3a1b348f-fb32-4248-8fb4-c0b5660d22d5","rating":4,"comment":"Produto excelente, recomendo!","created_at":{"$date":"2025-08-20T13:05:18.191Z"}}
